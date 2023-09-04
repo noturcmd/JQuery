@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlonePainPeanut</title>
     <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <img src="gambar2.png" alt="gambar random" id="foto">
+    <p id="teks-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error aut esse facere earum corporis maiores pariatur illo, sapiente obcaecati tempora suscipit eum adipisci, quo ab nulla odio nisi! Neque numquam odio placeat labore iusto fugiat modi praesentium veritatis sequi.</p>
     <script>
         $('document').ready(function(){
             $("#foto").click(function(){
                 $(this).fadeOut();
             })
         })
+
+        $("#teks-lorem").css("background-color", "red");
     </script>
-</head>
-<body>
-    <img src="gambar2.png" alt="gambar random" id="foto">
 </body>
 </html>
