@@ -17,11 +17,11 @@
         })
 
         $("#teks-lorem").css("background-color", "red");
-        const paragrafBaru = document.createElement("p");
-        const teksParagraf = document.createTextNode("Hello, Ridwan");
-        paragrafBaru.append(teksParagraf);
-        const elmBody = document.getElementsByTagName("body")[0];
-        elmBody.appendChild(paragrafBaru);
+        const paragraf = document.createElement("p");
+        paragraf.innerHTML = "Hello ini javascript";
+        document.getElementById("teks-lorem").appendChild(paragraf);
+
+        $("#teks-lorem").append("Hello ini jquery");
     </script>
 </body>
 </html>
