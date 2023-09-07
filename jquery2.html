@@ -5,12 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlonePainPeanut</title>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+
+        #h2-parent, h2#slide{
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #555;
+            color: white;
+            border: solid 1px #666;
+        }
+
+        h2#slide{
+            padding: 50px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit similique natus, possimus fuga tempore recusandae vel aliquid harum, molestias, alias repudiandae perspiciatis soluta cumque tenetur deleniti minus at repellendus beatae pariatur et. Corporis totam iure exercitationem sunt obcaecati fugiat repudiandae velit. Doloremque aliquid molestiae magni architecto nostrum, dolore est minima.</p>
-    <img src="gambar2.png" alt="gambar random" width="500px" id="gambar-random">
+    <img src="gambar2.png" alt="gambar random" width="500px" 
+    id="gambar-random">
+    <br>
+    <button type="button" id="opacity">Klik untuk menyembunyikan atau menampilkan gambar</button>
+    <div class="parent">
+        <h2 id="h2-parent">Tersembunyi</h2>
+        <h2 id="slide">Ditampilkan</h2>
+    </div>
+    <br>
+    <button type="button" id="slideDown">Klik untuk slide</button>
+    <button type="button" id="stop">Stop</button>
     <script>
-        $("#gambar-random").hide();
+        $(document).ready(function(){
+            $("button[id=\"opacity\"]").click(function(){
+                $("#gambar-random").fadeTo(2000, .50);
+            })
+        })
+
+        $(document).ready(function(){
+            $("#h2-parent").click(function(){
+                $("#slide").css("background-color", "darkblue").slideToggle(4000);
+            });
+            $("#stop").click(function(){
+                $("#slide").stop();
+            })
+        })
+
     </script>
 </body>
 </html>
